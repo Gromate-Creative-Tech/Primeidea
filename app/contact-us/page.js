@@ -85,8 +85,8 @@ const ContactUs = () => {
                                         </svg>
                                     </a>
                                 </div>
-                                <p className="mt-4 text-base text-gray-600">&quot;Welcome to PrimeIdea Ventures. With over two decades of experience in financial markets, we are dedicated to helping you achieve your financial goals. Our personalized approach ensures that every client receives tailored solutions for their unique needs, whether it&apos;s wealth management, retirement planning, or investment strategies. We believe in building long-term relationships based on trust, transparency, and excellence in service.&quot;</p>
-                                <p className="mt-2 text-base text-gray-800 font-semibold">- Partha Shah, Founder</p>
+                                <p className="mt-4 text-base text-gray-600">&quot;Welcome to PrimeIdea Ventures. In a world of complex financial markets, clarity comes from deep research and experience. With over two decades of expertise, my focus is to ensure that every strategy we recommend is backed by rigorous analysis and tailored to your unique life goals. Whether it is wealth management or retirement planning, we are dedicated to building a partnership with you based on transparency, regulatory integrity, and excellence.&quot;</p>
+                                <p className="mt-2 text-base text-gray-800 font-semibold">- Partha Shah <br/> Head of Research & Investment Strategy <br/> SEBI Registered Research Analyst (INH000017815)</p>
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 bg-[#f2f3f4] py-8 px-12 rounded-lg shadow-lg bg-[#fff]">
