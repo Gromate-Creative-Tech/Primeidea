@@ -6,6 +6,7 @@ import { useState } from 'react';
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         fullName: '',
+        city: '',
         email: '',
         phone: '',
         description: ''
@@ -46,6 +47,7 @@ const ContactForm = () => {
         formDataObj.append('_wpcf7_unit_tag', `wpcf7-f48-p${Date.now()}`); // Dynamic unit tag
         formDataObj.append('_wpcf7_container_post', '0');
         formDataObj.append('fullName', formData.fullName);
+        formDataObj.append('city', formData.city);
         formDataObj.append('email', formData.email);
         formDataObj.append('phone', formData.phone);
         formDataObj.append('description', formData.description);
@@ -74,7 +76,7 @@ const ContactForm = () => {
                     message: 'Thank you for your message. We will get back to you soon!'
                 });
                 notyf.success('Thank you for your message. We will get back to you soon!');
-                setFormData({ fullName: '', email: '', phone: '', description: '' });
+                setFormData({ fullName: '', city: '', email: '', phone: '', description: '' });
             } else {
                 setSubmitStatus({
                     success: false,
@@ -103,6 +105,16 @@ const ContactForm = () => {
                 value={formData.fullName}
                 onChange={handleChange}
                 placeholder="Enter Your Full Name" 
+                required
+                className="mb-4 block font-medium w-full px-3 py-3 border border-[#f6f6f6] shadow-sm bg-[#f6f6f6] text-[#1f4153] focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-[16px]" 
+            />
+            <input 
+                type="text" 
+                id="city" 
+                name="city" 
+                value={formData.city}
+                onChange={handleChange}
+                placeholder="Enter Your City" 
                 required
                 className="mb-4 block font-medium w-full px-3 py-3 border border-[#f6f6f6] shadow-sm bg-[#f6f6f6] text-[#1f4153] focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 text-[16px]" 
             />

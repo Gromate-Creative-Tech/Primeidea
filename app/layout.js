@@ -77,7 +77,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${manrope.variable}`}>
-      <Script
+      {/* <Script
           defer="defer"
           type="text/javascript"
           src="https://primeidea-ventures.odoo.com/im_livechat/loader/1"
@@ -86,9 +86,26 @@ export default function RootLayout({ children }) {
           defer="defer"
           type="text/javascript"
           src="https://primeidea-ventures.odoo.com/im_livechat/assets_embed.js"
-        />
+        /> */}
       <body className={manrope.className}>
         {children}        
+         <Script
+          id="tawk-to"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+              (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/59db992c4854b82732ff4818/default';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+              })();
+            `,
+          }}
+        />
       </body>
     </html>
   );

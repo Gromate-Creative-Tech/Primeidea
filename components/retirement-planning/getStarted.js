@@ -8,6 +8,7 @@ const GetStarted = () => {
     const [modal, setModal] = useState(false);
     const [formData, setFormData] = useState({
         fullName: '',
+        city: '',
         email: '',
         phone: '',
         description: ''
@@ -46,6 +47,7 @@ const GetStarted = () => {
         formDataObj.append('_wpcf7_unit_tag', `wpcf7-f48-p${Date.now()}`);
         formDataObj.append('_wpcf7_container_post', '0');
         formDataObj.append('fullName', formData.fullName);
+        formDataObj.append('city', formData.city);
         formDataObj.append('email', formData.email);
         formDataObj.append('phone', formData.phone);
         formDataObj.append('description', formData.description);
@@ -69,7 +71,7 @@ const GetStarted = () => {
                     message: 'Thank you for your message. We will get back to you soon!'
                 });
                 notyf.success('Thank you for your message. We will get back to you soon!');
-                setFormData({ fullName: '', email: '', phone: '', description: '' });
+                setFormData({ fullName: '', city: '', email: '', phone: '', description: '' });
                 toggle();
             } else {
                 throw new Error(data.message || 'Submission failed');
@@ -148,6 +150,18 @@ const GetStarted = () => {
                                         value={formData.fullName}
                                         onChange={handleChange}
                                         placeholder="Full Name"
+                                        className="peer w-full h-12 px-5 text-white bg-white/10 border-2 border-white/30 rounded-xl
+                                            focus:outline-none focus:border-white focus:bg-white/20 transition-all duration-300
+                                            group-hover:border-white/50"
+                                    />
+                                </div>                                
+                                <div className="relative group">
+                                    <input
+                                        type="text"
+                                        name="city"
+                                        value={formData.city}
+                                        onChange={handleChange}
+                                        placeholder="City"
                                         className="peer w-full h-12 px-5 text-white bg-white/10 border-2 border-white/30 rounded-xl
                                             focus:outline-none focus:border-white focus:bg-white/20 transition-all duration-300
                                             group-hover:border-white/50"
