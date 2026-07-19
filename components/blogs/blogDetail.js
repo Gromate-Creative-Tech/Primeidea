@@ -1,6 +1,7 @@
 'use client';
 import { useState } from 'react';
 import Image from "next/image";
+import Link from "next/link";
 import Header from "../header";
 import moment from "moment";
 import Footer from "../footer";
@@ -51,10 +52,10 @@ const BlogDetail = (props) => {
             <div className="2xl:max-w-[1320px] xl:max-w-[1170px] lg:max-w-[1004px] mx-auto px-4">
                 <ul className="flex flex-wrap mb-6">
                     <li className="font-bold text-[#0077FF]">
-                        <a href="/" >Home</a> <span className="inline-block px-1 text-[#171717]">/</span>
+                        <Link href="/" >Home</Link> <span className="inline-block px-1 text-[#171717]">/</span>
                     </li>
                     <li className="font-bold text-[#0077FF]">
-                        <a href="/blogs" >Blogs</a> <span className="inline-block px-1 text-[#171717]">/</span>
+                        <Link href="/blogs" >Blogs</Link> <span className="inline-block px-1 text-[#171717]">/</span>
                     </li>
                     <li className="font-bold text-[#171717]">
                         <span>{post?.title}</span>

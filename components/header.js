@@ -400,25 +400,25 @@ export default function Header() {
                         >
                           Become a Partner
                         </a>
-                        <a
+                        <Link
                           href="/careers"
                           className="block px-4 py-2 text-[15px] text-gray-700 hover:text-[#E40115]"
                           role="menuitem"
                         >
                           Careers
-                        </a>
+                        </Link>
                       
                     </div>
                 </div>
                 </button>
               </li>             
               <li className="!ml-2">
-                <a
+                <Link
                   href="/blogs"
                   className="block py-4 2xl:py-5 px-2 2xl:px-3 text-[15px] 2xl:text-base font-medium md:w-auto hover:text-[#E40115]"
                 >
                   Blogs
-                </a>
+                </Link>
               </li>
                <li className="!ml-2">
                 <a
@@ -555,9 +555,9 @@ export default function Header() {
               <a href="/become-a-partner" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                 Become a Partner
               </a>
-              <a href="/careers" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
+              <Link href="/careers" className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">
                 Careers
-              </a>
+              </Link>
             </>
           ) : (
             (activeSubmenu

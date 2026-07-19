@@ -8,7 +8,7 @@ import { getJobOpeningsSlugs, getSingleJobOpening } from "@/lib/jobOpenings";
 
 export async function generateStaticParams() {
   const jobOpeningSlugs = await getJobOpeningsSlugs();
-  return Object.values(jobOpeningSlugs)
+  return (jobOpeningSlugs ?? []).map(({ slug }) => ({ jobOpeningSlug: slug }));
 }
 async function getJobOpeningData(jobOpeningSlug) {
   const res = await getSingleJobOpening(jobOpeningSlug);
@@ -16,7 +16,7 @@ async function getJobOpeningData(jobOpeningSlug) {
 }
 
 export async function generateMetadata({ params }) {
-  const { jobOpeningSlug } = params;
+  const { jobOpeningSlug } = await params;
   const query = {
     query: `query pageSEO {
       jobOpening(id: "${jobOpeningSlug}", idType: SLUG) {
@@ -55,7 +55,6 @@ export async function generateMetadata({ params }) {
       telephone: true,
     },
     author: 'Partha Shah',
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow',
     canonical: `https://primeidea.in/careers/${jobOpeningSlug}`,
     alternates: {
@@ -93,8 +92,7 @@ export async function generateMetadata({ params }) {
 //   description: 'Join PrimeIdea Ventures and be part of a dynamic team shaping the future of financial services. Explore exciting career opportunities in investment advisory, financial planning, and wealth management.',
 //   keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
 //   author: 'Partha Shah',
-//   viewport: 'width=device-width, initial-scale=1',
-//   robots: 'index, follow',
+//   //   robots: 'index, follow',
 //   canonical: `https://primeidea.in/careers/${jobOpeningSlug}`,
 //   openGraph: {
 //     type: 'website',
@@ -122,7 +120,7 @@ function removeDash(str) {
   }
 
 export default async function JobDetailPage({ params }) {
-    const { jobOpeningSlug } = params;
+    const { jobOpeningSlug } = await params;
     const jobOpeningDetail = await getJobOpeningData(jobOpeningSlug);
     const jobOpeningName = removeDash(jobOpeningSlug);
 

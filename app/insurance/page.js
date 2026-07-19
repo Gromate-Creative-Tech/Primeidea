@@ -20,7 +20,6 @@ export const metadata = {
     description: 'Secure your future with PrimeIdea Ventures expert insurance services. From life and health coverage to auto and home protection, find solutions according to your needs.',
     keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
     author: 'Partha Shah',
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow',
     canonical: 'https://primeidea.in/insurance/',
     openGraph: {

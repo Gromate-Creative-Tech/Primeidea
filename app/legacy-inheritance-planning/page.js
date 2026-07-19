@@ -19,7 +19,6 @@ export const metadata = {
     description: 'Plan your legacy with expert inheritance financial planning and tax services. Partner with a trusted inheritance planning company to secure your assets and ensure seamless business legacy planning.',
     keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
     author: 'Partha Shah',
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow',
     canonical: 'https://primeidea.in/legacy-inheritance-planning/',
     openGraph: {

@@ -15,7 +15,6 @@ export const metadata = {
     description: 'Discover top-tier wealth management services in India with certified consultants. Contact with the best wealth management firm for solutions and expert advisory. Achieve your goals with our leading wealth management company.',
     keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
     author: 'Partha Shah',
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow',
     canonical: 'https://primeidea.in/research-based-wealth-management/',
     openGraph: {

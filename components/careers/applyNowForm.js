@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { usePathname } from 'next/navigation';
 import { Notyf } from 'notyf';
 import 'notyf/notyf.min.css';
@@ -13,7 +13,7 @@ const ApplyNowForm = ({jobOpeningName}) => {
         fullName: '',
         email: '',
         phone: '',
-        position: '',
+        position: !isSubmitResumePage && jobOpeningName ? jobOpeningName : '',
         cv: null
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -31,15 +31,6 @@ const ApplyNowForm = ({jobOpeningName}) => {
             });
         }
     };
-
-    useEffect(() => {
-        if (!isSubmitResumePage && jobOpeningName) {
-            setFormData(prev => ({
-                ...prev,
-                position: jobOpeningName
-            }));
-        }
-    }, [jobOpeningName, isSubmitResumePage]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();

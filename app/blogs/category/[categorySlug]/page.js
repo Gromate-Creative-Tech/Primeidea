@@ -8,7 +8,7 @@ import graphqlRequest from "@/lib/graphqlRequest";
 
 
 export async function generateMetadata({ params }) {
-  const { categorySlug } = params;
+  const { categorySlug } = await params;
   const query = {
     query: `query pageSEO {
       category(id: "${categorySlug}", idType: SLUG) {
@@ -47,7 +47,6 @@ export async function generateMetadata({ params }) {
       telephone: true,
     },
     author: 'Partha Shah',
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow',
     canonical: `https://primeidea.in/category/${categorySlug}`,
     alternates: {
@@ -138,7 +137,7 @@ async function getCategoryData(params) {
 }
 
 export default async function BlogsList({params}) {
-    const { categorySlug } = params;
+    const { categorySlug } = await params;
     const posts = await getData(categorySlug);
     const categoriesList = await getCategoriesPostList();
 

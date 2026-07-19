@@ -1,5 +1,6 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
 import FadeUpAnimationDelay from "@/animations/FadeUpAnimationDelay";
 import FadeUpAnimation from "@/animations/FadeUpAnimation";
@@ -59,7 +60,7 @@ const InsightsSection = (props) => {
                     insights and strategies to keep your financial game strong and
                     up-to-date.
                 </p>
-                <a
+                <Link
                   href="/blogs"
                   className="bg-[#293C7D] text-base md:text-lg font-bold rounded-md text-white px-6 py-3 inline-flex items-center"
                   >
@@ -71,7 +72,7 @@ const InsightsSection = (props) => {
                     alt="Read All"
                     className="ml-2"
                     />
-                </a>
+                </Link>
                 </FadeUpOneByOneAnimation>
 
                 <Image

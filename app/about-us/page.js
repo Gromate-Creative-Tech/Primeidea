@@ -19,7 +19,6 @@ export const metadata = {
   description: 'Get to know PrimeIdea Ventures, a team of financial experts to help you achieve your personal and business goals. Learn about our values and vision.',
   keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
   author: 'Partha Shah',
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   canonical: 'https://primeidea.in/about-us/',
   openGraph: {

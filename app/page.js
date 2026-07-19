@@ -16,7 +16,6 @@ export const metadata = {
   description: 'Your trusted partner for financial planning, investment advisory, and insurance solutions. Expert guidance for mutual funds, retirement planning, and wealth management with Partha Shah.',
   keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
   author: 'Partha Shah',
-  viewport: 'width=device-width, initial-scale=1',
   robots: 'index, follow',
   canonical: 'https://primeidea.in/',
   openGraph: {

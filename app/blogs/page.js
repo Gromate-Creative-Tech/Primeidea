@@ -10,7 +10,6 @@ export const metadata = {
     description: 'Explore PrimeIdea Ventures blog for expert insights on financial planning, investment strategies, retirement planning, tax savings, and wealth management to make informed financial decisions.',
     keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
     author: 'Partha Shah',
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow',
     canonical: 'https://primeidea.in/blogs/',
     openGraph: {

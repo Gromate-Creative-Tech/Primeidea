@@ -1,6 +1,7 @@
 "use client";
 import moment from "moment";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function BlogListing({ posts, categoriesList }) {
@@ -112,12 +113,12 @@ export default function BlogListing({ posts, categoriesList }) {
           </div>
           <ul>
             <li className="border-b border-[#479AD2]">
-              <a
+              <Link
                 href="/blogs"
                 className="text-[#222222] font-semibold text-lg xl:text-xl inline-block w-full px-4 py-3 xl:py-4"
               >
                 All Categories
-              </a>
+              </Link>
             </li>
             {categoriesList.filter(item => item.count > 0).map((items, index) => {
               return (

@@ -20,7 +20,6 @@ export const metadata = {
     description: 'Secure your future with the best retirement plans. Get expert retirement financial planning and pension services in India. Explore top retirement plan options and start planning today.',
     keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
     author: 'Partha Shah',
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow',
     canonical: 'https://primeidea.in/retirement-planning/',
     openGraph: {

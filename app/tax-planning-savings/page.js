@@ -19,7 +19,6 @@ export const metadata = {
     description: 'Discover expert tax planning services in India to optimize your income and save more. Explore the best tax-saving plans to meet your financial goals. Secure your future with effective income tax planning strategies.',
     keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
     author: 'Partha Shah',
-    viewport: 'width=device-width, initial-scale=1',
     robots: 'index, follow',
     canonical: 'https://primeidea.in/tax-planning-savings/',
     openGraph: {
