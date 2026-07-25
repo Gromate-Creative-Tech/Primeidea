@@ -480,18 +480,6 @@
   resolved "https://registry.npmjs.org/@tanstack/virtual-core/-/virtual-core-3.17.4.tgz"
   integrity sha512-nGm5KteqxasUdThLc2izl6dHUqLv0LQj7Nuyo5gYalTPf/U8a9ermvsl7reT+6ioBW1l8WfpP/mcU338nLXpqw==
 
-"@typebot.io/js@0.3.32":
-  version "0.3.32"
-  resolved "https://registry.npmjs.org/@typebot.io/js/-/js-0.3.32.tgz"
-  integrity sha512-vwPSzpI2dZ980aBWSVPYePXxoKh7e4iJplD6y9ieY8Bbh2Fo2LqEiFjR0KTYFESu8Dc+9oJTSAJru9Nt2FiuUQ==
-
-"@typebot.io/nextjs@^0.3.32":
-  version "0.3.32"
-  resolved "https://registry.npmjs.org/@typebot.io/nextjs/-/nextjs-0.3.32.tgz"
-  integrity sha512-vldKXY1End2aOsgkZsuq0xMGBW1CBM7QTfw3cmfzvY1AMGaPq53izqdGAlKilbb2MyL1wszcdYmKSXPKFr/Z9A==
-  dependencies:
-    "@typebot.io/js" "0.3.32"
-
 "@types/estree@^1.0.6":
   version "1.0.9"
   resolved "https://registry.npmjs.org/@types/estree/-/estree-1.0.9.tgz"
@@ -1781,11 +1769,6 @@ gopd@^1.0.1, gopd@^1.2.0:
   resolved "https://registry.npmjs.org/gopd/-/gopd-1.2.0.tgz"
   integrity sha512-ZUKRh6/kUFoAiTAtTYPZJ3hw9wNxx+BIBOijnlG9PnrJsCcSjs1wyyD6vJpaYtgnzDrKYRSqf3OO6Rfa93xsRg==
 
-gsap@^3.12.5:
-  version "3.12.5"
-  resolved "https://registry.npmjs.org/gsap/-/gsap-3.12.5.tgz"
-  integrity sha512-srBfnk4n+Oe/ZnMIOXt3gT605BX9x5+rh/prT2F1SsNJsU1XuMiP0E2aptW481OnonOGACZWBqseH5Z7csHxhQ==
-
 has-bigints@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/has-bigints/-/has-bigints-1.0.2.tgz"
@@ -2862,11 +2845,6 @@ scheduler@^0.27.0:
   version "0.27.0"
   resolved "https://registry.npmjs.org/scheduler/-/scheduler-0.27.0.tgz"
   integrity sha512-eNv+WrVbKu1f3vbYJT/xtiF5syA5HPIMtf9IgY/nKg0sWqzAUEvqY/xm7OcZc/qafLx/iO9FgOmeSAp4v5ti/Q==
-
-scrollmagic@^2.0.8:
-  version "2.0.8"
-  resolved "https://registry.npmjs.org/scrollmagic/-/scrollmagic-2.0.8.tgz"
-  integrity sha512-UYXEGBPVLziovXl3FjHGkY9c4UXKUKopIdXwWR2JapWxCo0U345wYegi7rcsv5vHf/ktc1bSNWy4QRFiV+Yccw==
 
 semver@^6.3.1:
   version "6.3.1"

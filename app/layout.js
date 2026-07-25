@@ -3,8 +3,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./globals.css";
 import Script from "next/script";
-import YellowMessengerWidget from "@/components/chatbot";
-// import { ChatBotScripts } from "@/components/chatbot";
 
 
 const manrope = Manrope({
@@ -80,7 +78,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${manrope.variable}`}>
+    <html lang="en" className={`${manrope.variable}`} suppressHydrationWarning>
       {/* <Script
           defer="defer"
           type="text/javascript"
@@ -91,7 +89,7 @@ export default function RootLayout({ children }) {
           type="text/javascript"
           src="https://primeidea-ventures.odoo.com/im_livechat/assets_embed.js"
         /> */}
-      <body className={manrope.className}>
+      <body className={manrope.className} suppressHydrationWarning>
         {children}        
          <Script
           id="tawk-to"
