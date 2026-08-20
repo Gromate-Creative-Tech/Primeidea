@@ -36,5 +36,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# local files
 /PrimeIdea_Website_Development_Scope_Hybrid_Geography_Workflow_Checklist.pdf
 /docs
+/.cursorrules

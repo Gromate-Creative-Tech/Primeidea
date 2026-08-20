@@ -1,19 +1,27 @@
-import BannerSection from "@/components/bannerSection";
 import ClientTestimonial from "@/components/clientTestimonial";
 import Footer from "@/components/footer";
-import Header from "@/components/header";
-import ComprehensiveSolutions from "@/components/home/comprehensiveSolutions";
+import BannerSection from "@/components/home/bannerSection";
+import ProofStrip from "@/components/home/proofStrip";
+import WhoWeHelpSection from "@/components/home/whoWeHelpSection";
+import ResearchProcessSection from "@/components/home/researchProcessSection";
+import PortfolioReviewFrameworkSection from "@/components/home/portfolioReviewFrameworkSection";
+import ProductUniverseSection from "@/components/home/productUniverseSection";
+import PrivateWealthSection from "@/components/home/privateWealthSection";
+import FamilyWealthOfficeSection from "@/components/home/familyWealthOfficeSection";
+import LegacySuccessionSection from "@/components/home/legacySuccessionSection";
+import FounderCredibilitySection from "@/components/home/founderCredibilitySection";
+import WealthToolsSection from "@/components/home/wealthToolsSection";
+import RegulatoryDisclosuresSection from "@/components/home/regulatoryDisclosuresSection";
 import FaqsSection from "@/components/home/faqsSection";
 import WealthCreationPreservation from "@/components/home/wealthCreationPreservationSection";
 import InsightsSection from "@/components/insightsSection";
 import JoinCommunity from "@/components/joinCommunity";
 import { getPostList } from "@/lib/posts";
-import Image from "next/image";
 import AppInstall from "@/components/appInstall";
 
 export const metadata = {
-  title: 'PrimeIdea Ventures - Mutual Funds, Insurance and Investment Advisory',
-  description: 'Your trusted partner for financial planning, investment advisory, and insurance solutions. Expert guidance for mutual funds, retirement planning, and wealth management with Partha Shah.',
+  title: 'Research-Led Wealth Management in Vadodara | PrimeIdea Ventures',
+  description: 'PrimeIdea Ventures helps investors across Gujarat and India with portfolio review and research-led wealth management through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.',
   keywords: 'mutual funds, investment advisory, financial planning, wealth management, retirement planning, insurance solutions, Partha Shah, PrimeIdea Ventures, Gujarat financial advisor, investment consultant',
   author: 'Partha Shah',
   robots: 'index, follow',
@@ -23,8 +31,8 @@ export const metadata = {
     locale: 'en_IE',
     url: 'https://primeidea.in/',
     site_name: 'PrimeIdea Ventures',
-    title: 'PrimeIdea Ventures - Expert Financial Planning & Investment Advisory',
-    description: 'Transform your financial future with PrimeIdea Ventures. Professional guidance for mutual funds, insurance, and comprehensive wealth management solutions.',
+    title: 'Research-Led Wealth Management in Vadodara | PrimeIdea Ventures',
+    description: 'PrimeIdea Ventures helps investors across Gujarat and India with portfolio review and research-led wealth management through a process guided by Partha Shah, SEBI Registered Research Analyst INH000017815.',
     // images: [
     //   {
     //     url: 'https://primeidea.in/images/home/banner.png',
@@ -60,22 +68,37 @@ export default async function Home() {
       <BannerSection 
        mainBannerImage={"/images/home/banner.png"}
        bannerRightImg={"/images/home/banner-right.png"}
-       mainTitle={"Experience You Can Trust"}
-       mainSubTitle={"Under Partha Shah's guidance, Primeidea turns financial goals into reality."}
-       mainLinkTitle={"Start your journey with us"}
-       mainLink={"https://api.whatsapp.com/send?phone=918141027000&text=Hello, I'm interested in learning more about your financial advisory and investment services. Could you please provide me with some details on how I can start planning my investments? Looking forward to hearing from you!"}
-       subSectionContent={"Primeidea creates financial plans that fuel your ambitions today and secure your success for tomorrow, whether you’re starting out or scaling up."}
-       subSectionTitle1={"Trusted By Family"}
-       subSectionSubTitle1={"1000+"}
-       subSectionTitle2={"Years of expertise"}
-       subSectionSubTitle2={"30+"}
-       subSectionTitle3={"Client Satisfaction"}
-       subSectionSubTitle3={"1500+"}
+       mainTitle={"Research-Led Wealth Management in Vadodara"}
+       mainSubTitle={"PrimeIdea Ventures is a Vadodara-based research-led firm serving investors across Gujarat and India. Under Partha Shah, SEBI Registered Research Analyst (INH000017815), we support portfolio review and goal-based wealth management across mutual funds, equity, ETFs, PMS, fixed income, SIPs, NPS, insurance, retirement, tax, and succession planning."}
+       mainLinkTitle={"Book Portfolio Review"}
+       mainLink={"/contact-us"}
+       usePrimaryAsLink={true}
+       formTitle={"Book Portfolio Review"}
+       secondaryLinkTitle={"View Research"}
+       secondaryLink={"/research-process"}
       />
+
+      <ProofStrip />
+
+      <WhoWeHelpSection />
 
       <WealthCreationPreservation />
 
-      <ComprehensiveSolutions />
+      <ResearchProcessSection />
+
+      <PortfolioReviewFrameworkSection />
+
+      <ProductUniverseSection />
+
+      <PrivateWealthSection />
+
+      <FamilyWealthOfficeSection />
+
+      <LegacySuccessionSection />
+
+      <FounderCredibilitySection />
+
+      <WealthToolsSection />
 
       <AppInstall />
 
@@ -83,9 +106,11 @@ export default async function Home() {
 
       <JoinCommunity />
 
+      <ClientTestimonial />
+
       <FaqsSection />
 
-      <ClientTestimonial />
+      <RegulatoryDisclosuresSection />
 
       <Footer />
     </div>

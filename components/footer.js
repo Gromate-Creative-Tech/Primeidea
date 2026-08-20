@@ -68,8 +68,8 @@ const Footer = () => {
                 </LinkGroup>
                 <LinkGroup header="Investment Planning">
                   <NavLink link="/research-based-wealth-management" label="Research Based Wealth Management" />
-                  <NavLink link="/retirement-planning" label="Dream Retirement Planning" />
-                  <NavLink link="/legacy-inheritance-planning" label="Legacy & Inheritance Planning" />
+                  <NavLink link="/retirement-planning-vadodara" label="Retirement Planning" />
+                  <NavLink link="/legacy-succession-estate-planning-india" label="Legacy, Succession & Estate" />
                   <NavLink link="/tax-planning-savings" label="Tax Planning & Savings" />
                 </LinkGroup>
               </FadeUpOneByOneAnimation>
@@ -77,10 +77,31 @@ const Footer = () => {
               <FadeUpOneByOneAnimation className="pb-10 lg:pb-20 md:pt-12 w-full sm:px-4 sm:w-1/2 md:max-w-[20%] xl:max-w-[25%] 2xl:max-w-[25%]">
                 <div className="sm:mb-10 w-full">
                   <h4 className="mb-3 text-lg font-semibold text-white">
-                    <Link href="/insurance">Insurance</Link>
+                    <Link href="/insurance-planning-vadodara">Insurance</Link>
                   </h4>
                   <h4 className="mb-3 text-lg font-semibold text-white">
                     <Link href="/about-us">About Us</Link>
+                  </h4>
+                  <h4 className="mb-3 text-lg font-semibold text-white">
+                    <Link href="/leadership-team">Leadership</Link>
+                  </h4>
+                  <h4 className="mb-3 text-lg font-semibold text-white">
+                    <Link href="/portfolio-review-vadodara">Portfolio Review</Link>
+                  </h4>
+                  <h4 className="mb-3 text-lg font-semibold text-white">
+                    <Link href="/mutual-fund-investment-support-vadodara">Mutual Fund Support</Link>
+                  </h4>
+                  <h4 className="mb-3 text-lg font-semibold text-white">
+                    <Link href="/fixed-income-investments-vadodara">Fixed Income</Link>
+                  </h4>
+                  <h4 className="mb-3 text-lg font-semibold text-white">
+                    <Link href="/nri-investment-support-india">NRI Investment Support</Link>
+                  </h4>
+                  <h4 className="mb-3 text-lg font-semibold text-white">
+                    <Link href="/private-wealth-management-gujarat-india">Private Wealth</Link>
+                  </h4>
+                  <h4 className="mb-3 text-lg font-semibold text-white">
+                    <Link href="/family-wealth-office-gujarat-india">Family Wealth Office</Link>
                   </h4>
                   <h4 className="mb-3 text-lg font-semibold text-white">
                     <Link href="/blogs">Blogs</Link>
@@ -90,6 +111,9 @@ const Footer = () => {
                   </h4>
                   <h4 className="mb-3 text-lg font-semibold text-white">
                     <Link href="/careers">Careers</Link>
+                  </h4>
+                  <h4 className="mb-3 text-lg font-semibold text-white">
+                    <Link href="/regulatory-disclosures">Regulatory Disclosures</Link>
                   </h4>
                   <h4 className="mb-3 text-lg font-semibold text-white">
                     <Link href="/contact-us">Contact Us</Link>

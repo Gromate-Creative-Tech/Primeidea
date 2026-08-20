@@ -27,6 +27,40 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/legacy-inheritance-planning",
+        destination: "/legacy-succession-estate-planning-india",
+        permanent: true,
+      },
+      {
+        source: "/legacy-inheritance-planning/",
+        destination: "/legacy-succession-estate-planning-india",
+        permanent: true,
+      },
+      {
+        source: "/retirement-planning",
+        destination: "/retirement-planning-vadodara",
+        permanent: true,
+      },
+      {
+        source: "/retirement-planning/",
+        destination: "/retirement-planning-vadodara",
+        permanent: true,
+      },
+      {
+        source: "/insurance",
+        destination: "/insurance-planning-vadodara",
+        permanent: true,
+      },
+      {
+        source: "/insurance/",
+        destination: "/insurance-planning-vadodara",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

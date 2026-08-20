@@ -1,5 +1,6 @@
 'use client';
 import Image from "next/image";
+import Link from "next/link";
 import Header from "./header";
 import FadeUpAnimation from "@/animations/FadeUpAnimation";
 import FadeUpOneByOneAnimation from "@/animations/FadeUpOneByOneAnimation";
@@ -11,19 +12,34 @@ const BannerSection = (props) => {
    const [isModalOpen, setIsModalOpen] = useState(false);
       
   const toggle = () => setIsModalOpen(!isModalOpen);
+  const formTitle = props.formTitle || 'Connect with Us';
+  const usePrimaryAsLink = props.usePrimaryAsLink === true && Boolean(props.mainLink);
+  const hasSubSection =
+    Boolean(props.subSectionContent) ||
+    Boolean(props.subSectionTitle1) ||
+    Boolean(props.subSectionTitle2) ||
+    Boolean(props.subSectionTitle3);
   
   // console.log(props);
   return (
     <section>
-      <ContactFormModal formTitle={'Connect with Us'} isOpen={isModalOpen} onClose={toggle} />
-      <div className="banner-section relative h-full md:h-[100vh]">
-        <div className="image-section h-[calc(100vh-166px)] w-full">
+      <ContactFormModal formTitle={formTitle} isOpen={isModalOpen} onClose={toggle} />
+      <div className={`banner-section relative h-full ${hasSubSection ? "md:h-[100vh]" : ""}`}>
+        <div
+          className={`image-section w-full relative overflow-hidden ${
+            hasSubSection ? "h-[calc(100vh-166px)]" : ""
+          }`}
+        >
           <Image
             src={props.mainBannerImage?props.mainBannerImage:''}
             width={1920}
             height={1280}
             alt={props.mainTitle}
-            className={`h-full w-full object-cover ${props.isMobileBanner ? 'hidden sm:block' : ''}`}
+            className={`w-full object-cover ${
+              hasSubSection
+                ? `h-full ${props.isMobileBanner ? "hidden sm:block" : ""}`
+                : `absolute inset-0 h-full -z-10 ${props.isMobileBanner ? "hidden sm:block" : ""}`
+            }`}
           />
           {props.isMobileBanner &&
           <Image
@@ -31,12 +47,26 @@ const BannerSection = (props) => {
             width={550}
             height={920}
             alt={props.mainTitle}
-            className={`h-full w-full object-cover ${props.isMobileBanner ? 'block sm:hidden' : ''}`}
+            className={`w-full object-cover ${props.isMobileBanner ? 'block sm:hidden' : ''} ${
+              hasSubSection ? "h-full" : "absolute inset-0 h-full -z-10"
+            }`}
           />
           }
-          <div className="main-section mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 pt-[160px] sm:pt-0 flex justify-between flex-col sm:flex-row absolute w-full bottom-[186px] sm:bottom-unset top-0 sm:top-[20%] left-[50%] translate-x-[-50%]">
+          <div
+            className={`main-section mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 flex justify-between flex-col sm:flex-row gap-6 sm:gap-8 w-full ${
+              hasSubSection
+                ? "absolute pt-[160px] sm:pt-0 bottom-[186px] sm:bottom-unset top-0 sm:top-[20%] left-[50%] translate-x-[-50%] items-start"
+                : "relative pt-[140px] sm:pt-[120px] pb-6 md:pb-8 sm:items-stretch"
+            }`}
+          >
 
-            <FadeUpAnimation className="lg:max-w-[400px] xl:max-w-[490px] mb-[4%] md:mb-0 mt-0 sm:mt-[10%]">
+            <FadeUpAnimation
+              className={`lg:max-w-[400px] xl:max-w-[520px] w-full ${
+                hasSubSection
+                  ? "mb-[4%] md:mb-0 mt-0 sm:mt-[10%]"
+                  : "mb-0 flex flex-col justify-center"
+              }`}
+            >
               {props.mainTitle &&
               <h1 className="text-2xl md:text-3xl xl:text-4xl text-[#2D2D2D] font-bold mb-3">
                 {/* Protect Your Family&apos;s Future with Confidence */}
@@ -44,28 +74,62 @@ const BannerSection = (props) => {
               </h1>
               }
               {props.mainSubTitle && 
-                <p className="md:text-lg xl:text-xl font-medium mb-4">
+                <p className="md:text-base xl:text-lg font-medium mb-4 leading-relaxed">
                   {/* Expert Assistance in Navigating Insurance Claims and Ensuring
                   Financial Security */}
                   {props.mainSubTitle}
                 </p>
               }
-              {props.mainLinkTitle &&
-              <button
-                // href={props.mainLink?props.mainLink:''}
-                className="bg-[#293C7D] md:text-md xl:text-lg font-bold rounded-md text-white px-6 py-3 inline-flex items-center"
-                // target="_blank"
-                onClick={toggle}
-              >
-                {props.mainLinkTitle?props.mainLinkTitle:''}
-                <Image
-                  src="/images/icons/arrow-square-right.png"
-                  width={21}
-                  height={21}
-                  alt="Read All"
-                  className="ml-2"
-                />
-              </button>
+              {(props.mainLinkTitle || props.secondaryLinkTitle) &&
+              <div className="flex flex-wrap gap-3">
+                {props.mainLinkTitle && (
+                  usePrimaryAsLink ? (
+                    <Link
+                      href={props.mainLink}
+                      className="bg-[#293C7D] md:text-md xl:text-lg font-bold rounded-md text-white px-6 py-3 inline-flex items-center"
+                    >
+                      {props.mainLinkTitle}
+                      <Image
+                        src="/images/icons/arrow-square-right.png"
+                        width={21}
+                        height={21}
+                        alt=""
+                        className="ml-2"
+                      />
+                    </Link>
+                  ) : (
+                    <button
+                      type="button"
+                      className="bg-[#293C7D] md:text-md xl:text-lg font-bold rounded-md text-white px-6 py-3 inline-flex items-center"
+                      onClick={toggle}
+                    >
+                      {props.mainLinkTitle}
+                      <Image
+                        src="/images/icons/arrow-square-right.png"
+                        width={21}
+                        height={21}
+                        alt=""
+                        className="ml-2"
+                      />
+                    </button>
+                  )
+                )}
+                {props.secondaryLinkTitle && props.secondaryLink && (
+                  <Link
+                    href={props.secondaryLink}
+                    className="border-2 border-[#293C7D] md:text-md xl:text-lg font-bold rounded-md text-[#293C7D] px-6 py-3 inline-flex items-center bg-white/90 hover:bg-white transition-colors"
+                  >
+                    {props.secondaryLinkTitle}
+                    <Image
+                      src="/images/icons/arrow-square-right-dark.png"
+                      width={21}
+                      height={21}
+                      alt=""
+                      className="ml-2"
+                    />
+                  </Link>
+                )}
+              </div>
               }
             </FadeUpAnimation>
             
@@ -84,9 +148,10 @@ const BannerSection = (props) => {
           </div>
         </div>
         <Header />
+        {hasSubSection && (
         <div className="bg-[#293C7D] py-10 relative w-full overflow-y-auto">
         {/* <div className="bg-[#293C7D]/95 py-10 absolute bottom-0 w-full"></div> */}
-          <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 min-w-[590px]">
+          <div className="mx-auto 2xl:max-w-[1340px] xl:max-w-[1170px] lg:max-w-[1004px] px-4 min-w-0 md:min-w-[590px]">
             <div className="flex justify-between">
               <FadeUpAnimation className="w-[45%] min-w-[230px]">
                 {props.subSectionContent &&
@@ -136,6 +201,7 @@ const BannerSection = (props) => {
             </div>
           </div>
         </div>
+        )}
       </div>
     </section>
   );
